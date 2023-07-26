@@ -1,2 +1,2 @@
-# DetectWeirdEmails
+# Email-SemanticSearchEngine-PoweredByOpenAI
 
