@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+SentimentAnalysis.egg-info/PKG-INFO
+SentimentAnalysis.egg-info/SOURCES.txt
+SentimentAnalysis.egg-info/dependency_links.txt
+SentimentAnalysis.egg-info/requires.txt
+SentimentAnalysis.egg-info/top_level.txt
