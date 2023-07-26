@@ -1,1 +1,2 @@
-# OpenAI-Email-SemanticSearch
+# DetectWeirdEmails
+

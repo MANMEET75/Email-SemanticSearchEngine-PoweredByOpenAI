@@ -1,0 +1,19 @@
+pandas
+numpy
+seaborn
+matplotlib
+vaderSentiment
+wordcloud
+textblob
+NRCLex
+streamlit
+cleantext
+langchain
+flask
+openai
+pandas
+matplotlib
+plotly
+scipy
+scikit-learn
+-e .
