@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="navbar-brand" href="#"><h3><img width="100" src="/static/images/logo3.jpg" style="display: inline-block;" alt="A description of the image"><div class="heading">Semantic Searching <br> <p id="subheading">Efficiently seeking suspicious emails through semantic searching.</p></div></h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- <p style="color: black;text-align: center;">Efficiently seeking suspicious emails through semantic searching.</p> -->
+      </div>
+    </nav>
+
+    <style>
+      #subheading{
+        font-size: 10px;
+        position: relative;
+        left: 100px;
+        bottom: 20px;
+
+      }
+      .heading{
+        display: inline;
+        position: relative;
+        top: 3px;
+        padding-left: 10px;
+      }
+
+      #navbar-brand{
+        margin: 18px;
+      }
+      #navbar-brand h3{
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        position: relative;
+        top: 8px;
+        
+      }
+      .ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+input::placeholder{
+  text-align: center;
+}
+.searchBTN{
+  border: 0;
+}
+    </style>
+    <br>
+    <br>
+    <br>
+<img id="logo" src="/static/images/logo7.1.png" alt="A description of the image">
+    <form action="/search" method="GET">
+      <input type="text" id="query" name="query" value="{{ query }}">
+
+      <center>
+        <br>
+        <button type="submit" value="search" class="searchBTN" style="display: block;width: 15%;background-color: #ccc;"><img width="150" height="47" src="/static/images/logo.jpg" alt="A description of the image"></button>
+      </center>
+
+
+
+
+
+    </form> 
+
+      <div id="results">
+        <center>
+
+          <h1>Search Results</h1>
+          {% if results %}
+          <ul>
+            {% for result in results %}
+            <li>"{{ result }}"</li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No results found.</p>
+          {% endif %}
+        </center>
+      </div>
+  </body>
+</html>
