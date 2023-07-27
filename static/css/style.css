@@ -1,7 +1,7 @@
 body { background: #ccc; color: white; font-family: arial; text-align: center; }
 #logo { width: 300px; }
 input { font-size: 20px; padding: 5px;     border-radius: 5px;
-}
+      }
 input[type=submit] { 
     background: black; 
     color: white; 
